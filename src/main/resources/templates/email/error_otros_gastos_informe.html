@@ -1,0 +1,96 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+	<head>
+	  <meta charset="UTF-8">
+	  <title th:text="${subject}"></title>
+	  <!-- Para correos, usa CSS inline simple -->
+	</head>
+	<body>
+	  <div align="center">
+		 <table cellpadding="0" width="680" cellspacing="0" border="0">
+			<tbody>
+			   <tr>
+				  <td width="680" bgcolor="#fff" style="padding:10px;background-color:#fff;border-radius:4px">
+					 <div align="center">
+						<table cellpadding="0" width="680" cellspacing="0" border="0">
+						   <tbody>
+							  <tr>
+								 <td style="padding:0;background-color:#fff">
+									<div align="center">
+									   <table cellpadding="0" cellspacing="0" border="0" width="100%" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:17px;line-height:1.5em;color:#666666">
+										  <tbody>
+											 <tr>
+												<td>
+												   <div align="center">
+													  <table cellpadding="0" cellspacing="0" border="0" width="680">
+														 <tbody>
+															<tr>
+															   <td valign="middle" bgcolor="#2790b8" colspan="12" width="100%" style="height:85px;width:100%;text-align:left;padding:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:17px;line-height:1.5em;color:#666666">
+																  <div style="max-height:36px;min-width:680px">
+																	 <div style="margin:0;padding:0"> <img src="https://ci3.googleusercontent.com/meips/ADKq_NbVzKMaQy6rGH8de8tH_0wR9l4ZmUYmCtnfg7zF-DhykLzoVCyOMES0q3OQNz1pd6TNRAga-DOuvsfQQ-x0AztC8Y-fpy_jYXxiiNTuDhU=s0-d-e1-ft#http://emailtemplatefiles.captio.net/imgs/logo-header.png" style="max-height:36px;max-width:148px;border-width:0px;border:0px;padding-left:25px" width="148" alt="Captio" title="Captio" class="CToWUd" data-bit="iit"> </div>
+																  </div>
+															   </td>
+															</tr>
+															<tr>
+															   <td valign="top" colspan="12" width="100.0%" style="width:100.0%;text-align:left;padding:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:17px;line-height:1.5em;color:#666666;min-width:680px!important;max-width:1000px!important">
+																  <table cellpadding="0" cellspacing="0" border="0" width="100%">
+																	 <tbody>
+																		<tr>
+																		   <td valign="top" colspan="12" width="100%" style="width:100%;text-align:left;padding:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:22px;color:#666666;border-left:1px solid #ccc;border-bottom:1px solid #ccc;border-right:1px solid #ccc">
+																			  <table cellpadding="0" cellspacing="0" border="0" width="100%">
+																				 <tbody>
+																					<tr>
+																					   <td valign=" top" colspan="12" width="100%" style="width:100%;text-align:left;padding:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:17px;line-height:1.5em;color:#666666">
+																						  <div style="padding-left:45px;padding-right:45px;padding-bottom:45px;padding-top:45px">
+																							 <p style="font-weight:bolder!important;color:#4d4d4d;font-size:20px;margin-bottom:28px">Estos son los errores que se encontraron al validar el siguiente informe de gastos:</p>
+																							 <p style="margin-bottom:28px" th:text="${informe}">Nombre Informe</p>
+																							 <div th:if="${mensaje != null and !#lists.isEmpty(mensaje)}">
+																								 <p style="font-weight:bolder!important;color:#4d4d4d;font-size:20px;margin-bottom:28px">A continuación puede revisar el detalle de los errores:</p>
+																								 <ul>
+																								  <li th:each="item : ${mensaje}" th:text="${item}"></li>
+																								  </ul>
+																							  </div>
+																							  <br>
+									        												 <p style="margin-bottom:28px">
+																							  <a th:href="@{'https://app.captio.net/Member/ReportsCaptio/ReportsCaptioEdit.aspx'(retType=1, idReport=${idReport})}"
+																							     style="font-size:18px;color:#0066CC;">
+																							    Abrir Informe Captio
+																							  </a>
+																							</p>
+																						  </div>
+																					   </td>
+																					</tr>
+																				 </tbody>
+																			  </table>
+																		   </td>
+																		</tr>
+																	 </tbody>
+																  </table>
+															   </td>
+															</tr>
+															<tr>
+															   <td>
+																  <div style="padding-top:20px">
+																	 <p style="margin-bottom:0;margin-top:0;text-align:justify;font-size:11px!important;line-height:11px;color:#929292;display:block">Aviso Legal: Este mensaje puede contener información confidencial y es para el uso exclusivo de su destinatario como usuario de la plataforma de Software <span class="il"><span class="il">Captio</span></span>. Si usted desea obtener información sobre el tratamiento de sus datos personales acceda, a nuestra <a style="font-size:11px!important;line-height:11px" href="https://www.captio.net/politica-de-privacidad" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.captio.net/politica-de-privacidad&amp;source=gmail&amp;ust=1759461070586000&amp;usg=AOvVaw0uZ5Sp1pBFK3PdYa4eI_tB">Política de Privacidad</a>º</p>
+																  </div>
+															   </td>
+															</tr>
+														 </tbody>
+													  </table>
+												   </div>
+												</td>
+											 </tr>
+										  </tbody>
+									   </table>
+									</div>
+								 </td>
+							  </tr>
+						   </tbody>
+						</table>
+					 </div>
+				  </td>
+			   </tr>
+			</tbody>
+		 </table>
+	  </div>
+	</body>
+</html>
